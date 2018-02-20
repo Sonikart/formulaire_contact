@@ -26,7 +26,7 @@
 	    $_SESSION['success'] = 1;
         $headers = 'FROM: '.$_POST['email'];
         $message = $_POST['message'];
-        mail($emails[$_POST['service']], 'Un email de '. $_POST['name'], $message, $header);
+        mail($emails[$_POST['service']], 'Un email de '. $_POST['name'], $message, $headers);
         header('location: index.php');
     }
 
